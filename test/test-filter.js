@@ -10,7 +10,7 @@ twit.addListener('error', function(error) {
 });
 
 
-twit.track('football');
+twit.track('movie');
 
 twit
   .addListener('tweet', function(tweet) {
