@@ -1,0 +1,19 @@
+{
+	"name"        : "twitter-reader",
+	"version"     : "0.0.1",
+	"main"        : "./lib/twitter-reader",
+	"description" : "Twitter reader for node.js",
+	"author"      : "Mathieu Lecarme <mathieu@garambrogne.net>",
+	"dependencies": {
+		'ngram': '>= 0.0.1'
+	},
+	"keywords"    : ["ngram", "twitter"],
+	"repositories": [{
+		"type": "git",
+		"path": "git://github.com/athoune/node-twitter-reader.git"
+		}],
+	"homepage"    : "http://github.com/athoune/node-twitter-reader",
+	"bugs"        : "http://github.com/athoune/node-twitter-reader/issues",
+	"licenses"    : [{ "type": "BSD"}],
+	"engine"      : "node"
+}
