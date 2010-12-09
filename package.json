@@ -5,7 +5,8 @@
 	"description" : "Twitter reader for node.js",
 	"author"      : "Mathieu Lecarme <mathieu@garambrogne.net>",
 	"dependencies": {
-		'ngram': '>= 0.0.1'
+		'ngram': '>= 0.0.2',
+		'twitter-node': '>=0.0.2'
 	},
 	"keywords"    : ["ngram", "twitter"],
 	"repositories": [{

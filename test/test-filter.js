@@ -7,9 +7,7 @@ var conf = require('./conf').conf,
 	Reader = require('../lib/twitter-reader').Reader;
 
 var fp = new ngram.FingerPrint();
-fs.readdirSync('/Applications/LibreOffice.app/Contents/basis-link/share/fingerprint/').forEach(function(lm) {
-	fp.register(lm.split('.')[0], '/Applications/LibreOffice.app/Contents/basis-link/share/fingerprint/' + lm);
-});
+fp.registerFolder('/Applications/LibreOffice.app/Contents/basis-link/share/fingerprint/');
 
 var twit = new TwitterNode(conf);
 
@@ -18,7 +16,7 @@ twit.addListener('error', function(error) {
 });
 
 
-twit.track('football');
+twit.track('wikileaks');
 
 twit
 	.addListener('tweet', function(tweet) {
