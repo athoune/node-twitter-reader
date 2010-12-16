@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Twitta powa</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script> 
+		<script>
+		$(function() {
+		var tweets = $("#tweets");
+		var socket = new io.Socket(null, {port: 8000, rememberTransport: false});
+		socket.connect();
+		socket.on('connect', function(){
+			console.log("I'm alive");
+			socket.send('hi!');
+			});
+		socket.on('message', function(data){
+			//console.log(data);
+			var tweet = $("<li>" + data + "</li>");
+			tweets.prepend(tweet);
+			tweet.fadeOut(5000, function() {
+				//console.log($(this));
+				$(this).remove();
+			});
+		});
+		socket.on('disconnect', function(){
+			
+		});
+	});
+		</script>
+	</head>
+	<body>
+		<h1>Twitta powa</h1>
+		<ul id="tweets">
+			
+		</ul>
+		
+	</body>
+</html>
