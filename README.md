@@ -35,3 +35,12 @@ Ideogram languages is broken, the tokenization doesn't work.
 		cd test
 		vi conf.js
 		node test-filter.js
+		
+Testing it with socket.io
+-------------------------
+
+		npm install socket.io
+		cd test/websocket
+		node server.js
+
+Open your browser : http://localhost:8000
