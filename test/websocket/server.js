@@ -46,6 +46,8 @@ ws.on('connection', function(client){
 	});
 });
 
+process.title = "node-twitter_reader";
+
 twit
 	.addListener('tweet', function(tweet) {
 		//sys.puts("@" + tweet.user.screen_name + ": " + tweet.text);
@@ -76,5 +78,6 @@ twit
 	.addListener('end', function(resp) {
 		sys.puts("wave goodbye... " + resp.statusCode);
 		//sys.puts(sys.inspect(resp));
+		process.exit(1);
 	});
 twit.stream();
